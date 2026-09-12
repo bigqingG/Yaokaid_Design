@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="妖斗牌·九川地区玩家图鉴" />
+    <title>妖斗牌｜九川图鉴</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="paper-texture"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="妖斗牌九川图鉴首页"><span class="brand-mark">妖</span><span>妖斗牌<span class="brand-light">· 九川图鉴</span></span></a>
+      <nav aria-label="主导航"><a href="#regions">地区</a><a href="#monsters">妖怪</a><a href="#about">世界</a></nav>
+      <button class="menu-button" type="button" aria-label="打开导航">☰</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">JIUCHUAN · MONSTER COMPENDIUM</p>
+          <h1 id="hero-title">穿行九川，<em>遇见妖怪</em></h1>
+          <p class="hero-copy">在人与妖怪共同生活的现代世界里，六个地区有六种脉搏。循着地图，认识它们的城市、山海与栖居其间的生命。</p>
+          <div class="hero-actions"><a class="button primary" href="#regions">探索地区 <span>↓</span></a><a class="button subtle" href="#monsters">浏览妖怪</a></div>
+          <dl class="hero-stats"><div><dt>06</dt><dd>已公开地区</dd></div><div><dt>34</dt><dd>已收录妖怪</dd></div><div><dt>05</dt><dd>基础元素</dd></div></dl>
+        </div>
+        <div class="hero-map-wrap" aria-label="九川地区探索地图">
+          <img src="../04-美术方向/地图/九川地区全境探索地图-v3.png" alt="九川地区探索地图" class="hero-map" />
+          <span class="map-caption">九川地区 · 探索地图</span>
+        </div>
+      </section>
+
+      <section id="regions" class="section regions-section" aria-labelledby="regions-title">
+        <div class="section-heading"><div><p class="eyebrow">SIX REGIONS OF JIUCHUAN</p><h2 id="regions-title">从一处地方，读懂一片九川</h2></div><p>每个区都拥有完整的城市与城乡生活；它们因自然条件、历史路径与生活方式，形成不同的气质。</p></div>
+        <div class="region-tabs" role="tablist" aria-label="九川地区"></div>
+        <article class="region-feature" id="region-feature"></article>
+      </section>
+
+      <section id="monsters" class="section monster-section" aria-labelledby="monsters-title">
+        <div class="section-heading"><div><p class="eyebrow">MONSTER ARCHIVE</p><h2 id="monsters-title">妖怪图鉴</h2></div><p>当前收录澄曜区与澜桥区的候选物种档案。选择一张卡，查看它的栖息环境、元素与生活习性。</p></div>
+        <div class="archive-tools">
+          <label class="search"><span>⌕</span><input id="search" type="search" placeholder="搜索妖怪名称、栖息地或特征" autocomplete="off" /></label>
+          <div class="filters" role="group" aria-label="妖怪筛选"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="火">火</button><button class="filter" data-filter="金">金</button><button class="filter" data-filter="水">水</button></div>
+        </div>
+        <div class="region-filters" role="group" aria-label="地区筛选"><span>地区</span><button class="region-filter active" data-region="all">全部地区</button><button class="region-filter" data-region="澄曜区">澄曜区</button><button class="region-filter" data-region="澜桥区">澜桥区</button></div>
+        <div id="monster-grid" class="monster-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div><p class="eyebrow">THE WORLD OF YAODOUPAI</p><h2>妖怪不只是<br /><em>竞技场上的名字。</em></h2></div>
+        <p>九川的妖怪首先是自然生态的一部分；其中一些与居民共居、冲突或合作，也有许多从不进入人类生活。玩家以卡牌记录这些相遇；每一张牌背后，都有一种独立延续的生命。</p>
+      </section>
+    </main>
+
+    <footer><span>妖斗牌 · 玩家图鉴</span><span>内容依据当前项目世界观与妖怪设定档案整理</span></footer>
+
+    <dialog id="monster-dialog" class="monster-dialog">
+      <button class="dialog-close" aria-label="关闭详情">×</button>
+      <div id="dialog-content"></div>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+# 效果类型总表
+
+> 基于ScriptableEffect系统，所有效果通过ScriptableObject数据驱动。
+
+## 三大效果生命周期
+- **OneShotEffect**：单次触发（部署/法术）
+- **TriggeredPersistentEffect**：持续监听事件
+- **AuraEffect**：持续存在，脏标记刷新
+
+## 常用ActionSO（可拓展）
+
+| 动作 | 说明 |
+|---|---|
+| DealDamage | 造成伤害 |
+| DrawCards | 抽牌 |
+| AddAttack/AddHealth | 增减攻血 |
+| GrantKeyword | 赋予关键词 |
+| WeatherAction | 切换天气 |
+| ElementalDamage | 元素伤害 |
+| IfCondition | 条件分支 |

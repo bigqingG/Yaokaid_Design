@@ -1,0 +1,10 @@
+# 触发效果规则
+
+## OneShotEffect
+解析目标 → 条件检查 → 执行success/failureActions → flush事件
+
+## AuraEffect
+事件触发 → 标记DirtyManager → 批量刷新 → 重算Modifier
+
+## 表现提交协议
+Request → Present → Commit → Resolve → Aftermath

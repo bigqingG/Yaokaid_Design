@@ -1,0 +1,30 @@
+﻿# 效果类型总表
+
+> 基于 ScriptableEffect 系统，所有效果通过 ScriptableObject 数据驱动。
+
+## 三大效果生命周期
+
+- **OneShotEffect**：单次触发。用于派遣、法术结算、天气预测、伤害、抽牌、治疗等。
+- **TriggeredPersistentEffect**：持续监听事件。用于妖怪在场效果和已激活御术的监听。
+- **AuraEffect**：持续存在，脏标记刷新。用于光环、阵列范围、天气加成等。
+
+## 常用 ActionSO
+
+| 动作 | 说明 |
+| --- | --- |
+| DealDamage | 造成普通伤害。 |
+| ElementalDamage | 造成指定元素伤害，并交给元素反应系统判定。 |
+| DrawCards | 抽牌。 |
+| AddAttack/AddHealth | 增减攻击或生命。 |
+| GrantKeyword | 赋予词条，如疾袭、掩护、护甲。 |
+| WeatherAction | 预测天气、清除天气或立即改变天气。 |
+| IfCondition | 条件分支。 |
+| SealUnit | 封除单位，放入公共封存卡组。 |
+| RecruitUnit | 从公共封存卡组征召单位。 |
+| CorruptUnit | 腐化单位。 |
+
+## 首版限制
+
+- 御术只做暗置反制，不做每回合收益引擎。
+- 天气不是卡牌类型，只是效果。
+- 召唤物不再有 Token 特殊身份；通过效果进入战场的妖怪统一称为加入战场。
